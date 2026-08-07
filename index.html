@@ -1,208 +1,789 @@
-<div style="background-color: #000000; color: #ffffff; padding: 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.6; border-radius: 8px; border: 1px solid #333333;">
+<div style="background-color: #060709; color: #adbac7; padding: 40px 30px; font-family: 'Orbitron', -apple-system, sans-serif; font-size: 13px; border-radius: 16px; border: 1px solid #14171f; max-width: 1750px; margin: 0 auto; box-sizing: border-box; box-shadow: 0 30px 60px rgba(0,0,0,0.9); background-image: radial-gradient(#1f2430 1px, transparent 0); background-size: 24px 24px; overflow-x: auto;">
 
-<div style="background-color: #000000; color: #ffffff; padding: 35px 25px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.7; border-radius: 8px; border: 1px solid #333333; max-width: 800px; margin: 0 auto;">
-  <h1 style="color: #ffffff; border-bottom: 2px solid #333333; padding-bottom: 15px; margin-top: 0; margin-bottom: 25px; text-align: center; font-size: 24px; letter-spacing: 0.5px;">📊 TOURNAMENT GROUP STAGES (A - F)</h1>
-  <p style="text-align: center; color: #aaaaaa; font-style: italic; margin-bottom: 0; padding: 0 15px; font-size: 15px;">Top 2 players and the 2 best 3rd-place finishers advance automatically to play offs, while the remaining 4 third-place records enter a Preliminary Round where 2 are eliminated.</p>
-</div>
+  <!-- HIGH-END TOURNAMENT GROUPS ARCHITECTURE CODES -->
+  <style>
+    .group-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #adbac7;
+      margin-bottom: 40px;
+      border: 1px solid #28303f;
+      background: #0d0f14;
+    }
+    .group-table th {
+      background-color: #111111;
+      color: #6c7d93;
+      padding: 12px;
+      border: 1px solid #28303f;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .group-table td {
+      padding: 12px;
+      border: 1px solid #28303f;
+    }
+    /* NEON GRADIENT ROW REPLICAS FROM PLAYOFFS */
+    .row-playoffs {
+      background: linear-gradient(90deg, #0a1f11 0%, #0d0f14 100%) !important;
+      border-left: 4px solid #23a942 !important;
+    }
+    .row-prelim {
+      background: linear-gradient(90deg, #201b13 0%, #0d0f14 100%) !important;
+      border-left: 4px solid #d4a373 !important;
+    }
+    .row-eliminated {
+      background: linear-gradient(90deg, #261111 0%, #0d0f14 100%) !important;
+      border-left: 4px solid #8a2b2b !important;
+      opacity: 0.6;
+    }
+    /* GLOWING POINTS BLOCK FRAMEWORK */
+    .pts-box {
+      background: #0f111a;
+      border: 1px solid #364259;
+      border-radius: 4px;
+      color: #ffb703;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 3px 8px;
+      text-shadow: 0 0 6px rgba(255, 183, 3, 0.6);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
+      display: inline-block;
+    }
+    /* IN-LINE ALIGNMENT INTERFACES */
+    .inner-player-table {
+      border: none !important; 
+      background: none !important; 
+      margin: 0 !important; 
+      padding: 0 !important; 
+      border-collapse: collapse !important;
+    }
+    .inner-player-table td {
+      border: none !important; 
+      padding: 0 !important;
+      vertical-align: middle !important;
+    }
+    .discord-comms-btn {
+      display: block;
+      border: 0;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out;
+    }
+    .discord-comms-btn:hover {
+      transform: scale(1.25);
+      box-shadow: 0 0 10px #5865F2;
+      filter: brightness(1.2);
+    }
+  </style>
 
-<hr style="border: 0; border-top: 1px solid #333333; margin: 20px 0;">
-<!-- GROUP A -->
-<h2 style="color: #ffffff; margin-bottom: 5px;">🔴 GROUP A</h2>
-<table style="width: 100%; border-collapse: collapse; color: #ffffff; margin-bottom: 30px; border: 1px solid #333333;">
-  <thead>
-    <tr style="background-color: #111111; text-align: left;">
-      <th style="padding: 10px; border: 1px solid #333333;">Pos</th>
-      <th style="padding: 10px; border: 1px solid #333333;">Player ID</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Sets Played</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">W - D - L</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Points</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">1</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com/users/1368339128491442196" target="_blank"><img src="https://github.com/8brcam/Groups/blob/main/Discordd-Photoroom.png?raw=true" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Kevin likes ladyboys</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">2</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_A2</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #2b2613;"><td style="padding: 10px; border: 1px solid #333333;">3</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_A3</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #d4a373;">🟡 Preliminary Round / Direct Entry</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">4</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_A4</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">5</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_A5</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">6</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_A6</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-  </tbody>
-</table>
-<!-- GROUP B -->
-<h2 style="color: #ffffff; margin-bottom: 5px;">🔵 GROUP B</h2>
-<table style="width: 100%; border-collapse: collapse; color: #ffffff; margin-bottom: 30px; border: 1px solid #333333;">
-  <thead>
-    <tr style="background-color: #111111; text-align: left;">
-      <th style="padding: 10px; border: 1px solid #333333;">Pos</th>
-      <th style="padding: 10px; border: 1px solid #333333;">Player ID</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Sets Played</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">W - D - L</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Points</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">1</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_B1</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">2</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_B2</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #2b2613;"><td style="padding: 10px; border: 1px solid #333333;">3</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_B3</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #d4a373;">🟡 Preliminary Round / Direct Entry</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">4</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_B4</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">5</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_B5</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">6</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_B6</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-  </tbody>
-</table>
-<!-- GROUP C -->
-<h2 style="color: #ffffff; margin-bottom: 5px;">🟢 GROUP C</h2>
-<table style="width: 100%; border-collapse: collapse; color: #ffffff; margin-bottom: 30px; border: 1px solid #333333;">
-  <thead>
-    <tr style="background-color: #111111; text-align: left;">
-      <th style="padding: 10px; border: 1px solid #333333;">Pos</th>
-      <th style="padding: 10px; border: 1px solid #333333;">Player ID</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Sets Played</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">W - D - L</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Points</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">1</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_C1</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">2</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_C2</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #2b2613;"><td style="padding: 10px; border: 1px solid #333333;">3</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_C3</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #d4a373;">🟡 Preliminary Round / Direct Entry</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">4</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_C4</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">5</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_C5</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">6</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_C6</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-  </tbody>
-</table>
-<!-- GROUP D -->
-<h2 style="color: #ffffff; margin-bottom: 5px;">🟡 GROUP D</h2>
-<table style="width: 100%; border-collapse: collapse; color: #ffffff; margin-bottom: 30px; border: 1px solid #333333;">
-  <thead>
-    <tr style="background-color: #111111; text-align: left;">
-      <th style="padding: 10px; border: 1px solid #333333;">Pos</th>
-      <th style="padding: 10px; border: 1px solid #333333;">Player ID</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Sets Played</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">W - D - L</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Points</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">1</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_D1</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">2</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_D2</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #2b2613;"><td style="padding: 10px; border: 1px solid #333333;">3</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_D3</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #d4a373;">🟡 Preliminary Round / Direct Entry</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">4</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_D4</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">5</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_D5</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">6</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_D6</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-  </tbody>
-</table>
-<!-- GROUP E -->
-<h2 style="color: #ffffff; margin-bottom: 5px;">🟣 GROUP E</h2>
-<table style="width: 100%; border-collapse: collapse; color: #ffffff; margin-bottom: 30px; border: 1px solid #333333;">
-  <thead>
-    <tr style="background-color: #111111; text-align: left;">
-      <th style="padding: 10px; border: 1px solid #333333;">Pos</th>
-      <th style="padding: 10px; border: 1px solid #333333;">Player ID</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Sets Played</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">W - D - L</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Points</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">1</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_E1</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">2</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_E2</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #2b2613;"><td style="padding: 10px; border: 1px solid #333333;">3</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_E3</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #d4a373;">🟡 Preliminary Round / Direct Entry</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">4</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_E4</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">5</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_E5</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">6</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_E6</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-  </tbody>
-</table>
-<!-- GROUP F -->
-<h2 style="color: #ffffff; margin-bottom: 5px;">⚪ GROUP F</h2>
-<table style="width: 100%; border-collapse: collapse; color: #ffffff; margin-bottom: 30px; border: 1px solid #333333;">
-  <thead>
-    <tr style="background-color: #111111; text-align: left;">
-      <th style="padding: 10px; border: 1px solid #333333;">Pos</th>
-      <th style="padding: 10px; border: 1px solid #333333;">Player ID</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Sets Played</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">W - D - L</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Points</th>
-      <th style="padding: 10px; border: 1px solid #333333; text-align: center;">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">1</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_F1</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #1a3a1a;"><td style="padding: 10px; border: 1px solid #333333;">2</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><strong style="white-space: nowrap;">Player_F2</strong></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #2ea043;">🟢 Playoffs</td></tr>
-    <tr style="background-color: #2b2613;"><td style="padding: 10px; border: 1px solid #333333;">3</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_F3</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #d4a373;">🟡 Preliminary Round / Direct Entry</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">4</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_F4</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">5</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_F5</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-    <tr><td style="padding: 10px; border: 1px solid #333333;">6</td><td style="padding: 10px; border: 1px solid #333333;"><table style="border: none; background: none; margin: 0; padding: 0; border-collapse: collapse;"><tr style="border: none; background: none;"><td style="border: none; padding: 0 8px 0 0; vertical-align: middle;"><a href="https://discord.com" target="_blank"><img src="https://github.com" width="18" height="18" style="display: block; border: 0;"></a></td><td style="border: none; padding: 0; vertical-align: middle; color: #ffffff;"><span style="white-space: nowrap;">Player_F6</span></td></tr></table></td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;">0 - 0 - 0</td><td style="padding: 10px; border: 1px solid #333333; text-align: center;"><strong>0</strong></td><td style="padding: 10px; border: 1px solid #333333; text-align: center; color: #f85149;">🔴 Eliminated</td></tr>
-  </tbody>
-</table>
-<br>
-<hr style="border: 0; border-top: 3px solid #333333; margin: 35px 0;">
+  <!-- TITLE ZONE WITH RULES BLOCK -->
+  <div style="padding: 10px 0; text-align: center; max-width: 800px; margin: 0 auto 35px auto;">
+    <h1 style="color: #ffffff; border-bottom: 2px solid #21262d; padding-bottom: 15px; margin-top: 0; margin-bottom: 15px; font-size: 24px; letter-spacing: 3px; font-weight: 900; text-transform: uppercase;">📊 8BRCAM GROUP STAGES</h1>
+    <p style="color: #6c7d93; font-style: italic; margin-bottom: 0; font-size: 13px; font-family: sans-serif;">Top 2 players and the 2 best 3rd-place finishers advance automatically to playoffs, while the remaining 4 third-place records enter a Preliminary Round where 2 are eliminated.</p>
+  </div>
+  <!-- 🔴 GROUP A -->
+  <h2 style="color: #ff4d4d; margin-bottom: 10px; font-size: 18px; font-weight: 900; letter-spacing: 1px;">🔴 GROUP A</h2>
+  <table class="group-table">
+    <thead>
+      <tr>
+        <th style="width: 5%; text-align: center;">Pos</th>
+        <th style="width: 45%; text-align: left;">Player ID <span style="color: #768390; font-size: 11px; font-weight: bold; font-family: sans-serif; text-transform: none; margin-left: 8px; letter-spacing: 0px;">(Click Discord icon to DM opponent)</span></th>
+        <th style="width: 12%; text-align: center;">Sets Played</th>
+        <th style="width: 13%; text-align: center;">W - D - L</th>
+        <th style="width: 10%; text-align: center;">Points</th>
+        <th style="width: 15%; text-align: center;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">1</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to send direct message to Kevin likes ladyboys to arrange group match"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #4bf074;">Kevin likes ladyboys</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">2</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message this player to arrange your group stage match"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_A2</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-prelim">
+        <td style="text-align: center; font-weight: bold; color: #d4a373;">3</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message this player to arrange your group stage match"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_A3</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #d4a373; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟡 PRELIM</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">4</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message this player to arrange your group stage match"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_A4</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">5</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message this player to arrange your group stage match"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_A5</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">6</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message this player to arrange your group stage match"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_A6</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- 🔵 GROUP B -->
+  <h2 style="color: #2b84f3; margin-bottom: 10px; font-size: 18px; font-weight: 900; letter-spacing: 1px;">🔵 GROUP B</h2>
+  <table class="group-table">
+    <thead>
+      <tr>
+        <th style="width: 5%; text-align: center;">Pos</th>
+        <th style="width: 45%; text-align: left;">Player ID <span style="color: #768390; font-size: 11px; font-weight: bold; font-family: sans-serif; text-transform: none; margin-left: 8px; letter-spacing: 0px;">(Click Discord icon to DM opponent)</span></th>
+        <th style="width: 12%; text-align: center;">Sets Played</th>
+        <th style="width: 13%; text-align: center;">W - D - L</th>
+        <th style="width: 10%; text-align: center;">Points</th>
+        <th style="width: 15%; text-align: center;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">1</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_B1"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_B1</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">2</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_B2"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_B2</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-prelim">
+        <td style="text-align: center; font-weight: bold; color: #d4a373;">3</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_B3"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_B3</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #d4a373; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟡 PRELIM</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">4</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_B4"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_B4</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">5</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_B5"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_B5</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">6</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_B6"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_B6</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- 🟢 GROUP C -->
+  <h2 style="color: #23a942; margin-bottom: 10px; font-size: 18px; font-weight: 900; letter-spacing: 1px;">🟢 GROUP C</h2>
+  <table class="group-table">
+    <thead>
+      <tr>
+        <th style="width: 5%; text-align: center;">Pos</th>
+        <th style="width: 45%; text-align: left;">Player ID <span style="color: #768390; font-size: 11px; font-weight: bold; font-family: sans-serif; text-transform: none; margin-left: 8px; letter-spacing: 0px;">(Click Discord icon to DM opponent)</span></th>
+        <th style="width: 12%; text-align: center;">Sets Played</th>
+        <th style="width: 13%; text-align: center;">W - D - L</th>
+        <th style="width: 10%; text-align: center;">Points</th>
+        <th style="width: 15%; text-align: center;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">1</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_C1"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_C1</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">2</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_C2"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_C2</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-prelim">
+        <td style="text-align: center; font-weight: bold; color: #d4a373;">3</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_C3"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_C3</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #d4a373; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟡 PRELIM</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">4</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_C4"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_C4</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">5</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_C5"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_C5</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">6</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_C6"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_C6</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- 🟡 GROUP D -->
+  <h2 style="color: #ffb703; margin-bottom: 10px; font-size: 18px; font-weight: 900; letter-spacing: 1px;">🟡 GROUP D</h2>
+  <table class="group-table">
+    <thead>
+      <tr>
+        <th style="width: 5%; text-align: center;">Pos</th>
+        <th style="width: 45%; text-align: left;">Player ID <span style="color: #768390; font-size: 11px; font-weight: bold; font-family: sans-serif; text-transform: none; margin-left: 8px; letter-spacing: 0px;">(Click Discord icon to DM opponent)</span></th>
+        <th style="width: 12%; text-align: center;">Sets Played</th>
+        <th style="width: 13%; text-align: center;">W - D - L</th>
+        <th style="width: 10%; text-align: center;">Points</th>
+        <th style="width: 15%; text-align: center;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">1</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_D1"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_D1</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">2</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_D2"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_D2</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-prelim">
+        <td style="text-align: center; font-weight: bold; color: #d4a373;">3</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_D3"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_D3</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #d4a373; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟡 PRELIM</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">4</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_D4"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_D4</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">5</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_D5"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_D5</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">6</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_D6"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_D6</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- 🟣 GROUP E -->
+  <h2 style="color: #a371f7; margin-bottom: 10px; font-size: 18px; font-weight: 900; letter-spacing: 1px;">🟣 GROUP E</h2>
+  <table class="group-table">
+    <thead>
+      <tr>
+        <th style="width: 5%; text-align: center;">Pos</th>
+        <th style="width: 45%; text-align: left;">Player ID <span style="color: #768390; font-size: 11px; font-weight: bold; font-family: sans-serif; text-transform: none; margin-left: 8px; letter-spacing: 0px;">(Click Discord icon to DM opponent)</span></th>
+        <th style="width: 12%; text-align: center;">Sets Played</th>
+        <th style="width: 13%; text-align: center;">W - D - L</th>
+        <th style="width: 10%; text-align: center;">Points</th>
+        <th style="width: 15%; text-align: center;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">1</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_E1"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_E1</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">2</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_E2"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_E2</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-prelim">
+        <td style="text-align: center; font-weight: bold; color: #d4a373;">3</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_E3"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_E3</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #d4a373; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟡 PRELIM</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">4</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_E4"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_E4</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">5</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_E5"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_E5</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">6</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_E6"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_E6</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- ⚪ GROUP F -->
+  <h2 style="color: #ffffff; margin-bottom: 10px; font-size: 18px; font-weight: 900; letter-spacing: 1px;">⚪ GROUP F</h2>
+  <table class="group-table">
+    <thead>
+      <tr>
+        <th style="width: 5%; text-align: center;">Pos</th>
+        <th style="width: 45%; text-align: left;">Player ID <span style="color: #768390; font-size: 11px; font-weight: bold; font-family: sans-serif; text-transform: none; margin-left: 8px; letter-spacing: 0px;">(Click Discord icon to DM opponent)</span></th>
+        <th style="width: 12%; text-align: center;">Sets Played</th>
+        <th style="width: 13%; text-align: center;">W - D - L</th>
+        <th style="width: 10%; text-align: center;">Points</th>
+        <th style="width: 15%; text-align: center;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">1</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_F1"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_F1</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-playoffs">
+        <td style="text-align: center; font-weight: bold; color: #4bf074;">2</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_F2"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><strong style="white-space: nowrap; color: #ffffff;">Player_F2</strong></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #4bf074; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟢 PLAYOFFS</td>
+      </tr>
+      <tr class="row-prelim">
+        <td style="text-align: center; font-weight: bold; color: #d4a373;">3</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_F3"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_F3</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #d4a373; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🟡 PRELIM</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">4</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_F4"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_F4</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">5</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_F5"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_F5</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+      <tr class="row-eliminated">
+        <td style="text-align: center; font-weight: bold; color: #ff4d4d;">6</td>
+        <td>
+          <table class="inner-player-table">
+            <tr>
+              <td style="padding-right: 8px !important;"><a href="https://discord.com" target="_blank" title="Click to message Player_F6"><img src="https://github.com" width="18" height="18" class="discord-comms-btn"></a></td>
+              <td><span style="white-space: nowrap; color: #adbac7;">Player_F6</span></td>
+            </tr>
+          </table>
+        </td>
+        <td style="text-align: center;">0</td>
+        <td style="text-align: center;">0 - 0 - 0</td>
+        <td style="text-align: center;"><span class="pts-box">0</span></td>
+        <td style="text-align: center; color: #ff4d4d; font-weight: 900; font-size: 11px; letter-spacing: 1px;">🔴 ELIMINATED</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- COMPACT SEPARATOR - ZERO GAP -->
+  <hr style="border: 0; border-top: 3px solid #21262d; margin: 15px 0;">
 
-<!-- LARGE FULL-WIDTH PLAYOFFS BRACKET PREVIEW -->
-<h1 style="color: #ffffff; border-bottom: 2px solid #333333; padding-bottom: 12px; margin-top: 0; text-align: center; font-size: 26px; letter-spacing: 1px;">⚔️ PLAYOFFS BRACKET PREVIEW</h1>
+  <!-- LARGE FULL-WIDTH PLAYOFFS BRACKET PREVIEW -->
+  <h1 style="color: #ffffff; border-bottom: 2px solid #21262d; padding-bottom: 12px; margin-top: 0; text-align: center; font-size: 26px; letter-spacing: 1px; font-weight: 900; text-transform: uppercase;">⚔️ PLAYOFFS BRACKET PREVIEW</h1>
 
-<table style="width: 100%; border-collapse: collapse; color: #ffffff; border: 1px solid #333333; margin-top: 20px; font-size: 16px;">
-  <thead>
-    <tr style="background-color: #111111; text-align: left;">
-      <th style="padding: 16px; border: 1px solid #333333; width: 25%; font-size: 17px;">Match ID</th>
-      <th style="padding: 16px; border: 1px solid #333333; width: 35%; font-size: 17px;">High Seed Entry</th>
-      <th style="padding: 16px; border: 1px solid #333333; width: 8%; text-align: center; font-size: 17px;">VS</th>
-      <th style="padding: 16px; border: 1px solid #333333; width: 35%; font-size: 17px;">Challenger Entry</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M1</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Group Winner (1st Top Seed)</td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333; color: #d4a373; font-weight: bold;">Winner Match P1 (Preliminary Round Survivor)</td>
-    </tr>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M2</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Group Winner (2nd Top Seed)</td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333; color: #d4a373; font-weight: bold;">Winner Match P2 (Preliminary Round Survivor )</td>
-    </tr>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M3</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Group Winner </td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333; color: #ffffff;">1st Best 3rd Place (Direct Entry)</td>
-    </tr>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M4</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Group Winner </td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333; color: #ffffff;">2nd Best 3rd Place (Direct Entry)</td>
-    </tr>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M5</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Group Winner </td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333;">Runner-up Group </td>
-    </tr>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M6</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Group Winner </td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333;">Runner-up Group </td>
-    </tr>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M7</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Runner-up Group </td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333;">Runner-up Group </td>
-    </tr>
-    <tr>
-      <td style="padding: 18px; border: 1px solid #333333; background-color: #0b1520;"><strong>Round of 16 - M8</strong></td>
-      <td style="padding: 18px; border: 1px solid #333333; font-weight: 500;">Runner-up Group </td>
-      <td style="padding: 18px; border: 1px solid #333333; text-align: center; color: #aaaaaa; font-weight: bold;">vs</td>
-      <td style="padding: 18px; border: 1px solid #333333;">Runner-up Group </td>
-    </tr>
-  </tbody>
-</table>
+  <table style="width: 100%; border-collapse: collapse; color: #adbac7; border: 1px solid #28303f; background: #0d0f14; margin-top: 20px; font-size: 16px;">
+    <thead>
+      <tr style="background-color: #111111; text-align: left;">
+        <th style="padding: 16px; border: 1px solid #28303f; width: 25%; font-size: 14px; color: #6c7d93; text-transform: uppercase; letter-spacing: 1px;">Match ID</th>
+        <th style="padding: 16px; border: 1px solid #28303f; width: 35%; font-size: 14px; color: #6c7d93; text-transform: uppercase; letter-spacing: 1px;">High Seed Entry</th>
+        <th style="padding: 16px; border: 1px solid #28303f; width: 8%; text-align: center; font-size: 14px; color: #6c7d93; text-transform: uppercase; letter-spacing: 1px;">VS</th>
+        <th style="padding: 16px; border: 1px solid #28303f; width: 35%; font-size: 14px; color: #6c7d93; text-transform: uppercase; letter-spacing: 1px;">Challenger Entry</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Group Winner (1st Top Seed)</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f; color: #d4a373; font-weight: bold;">Winner Match P1 (Preliminary Round Survivor)</td>
+      </tr>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Group Winner (2nd Top Seed)</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f; color: #d4a373; font-weight: bold;">Winner Match P2 (Preliminary Round Survivor)</td>
+      </tr>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Group Winner</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f; color: #ffffff;">1st Best 3rd Place (Direct Entry)</td>
+      </tr>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Group Winner</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f; color: #ffffff;">2nd Best 3rd Place (Direct Entry)</td>
+      </tr>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Group Winner</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f;">Runner-up Group</td>
+      </tr>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Group Winner</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f;">Runner-up Group</td>
+      </tr>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Runner-up Group</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f;">Runner-up Group</td>
+      </tr>
+      <tr>
+        <td style="padding: 18px; border: 1px solid #28303f; background-color: #0b1520;"><strong>Round of 16</strong></td>
+        <td style="padding: 18px; border: 1px solid #28303f; font-weight: 500;">Runner-up Group</td>
+        <td style="padding: 18px; border: 1px solid #28303f; text-align: center; color: #ff6e6e; font-weight: bold;">vs</td>
+        <td style="padding: 18px; border: 1px solid #28303f;">Runner-up Group</td>
+      </tr>
+    </tbody>
+  </table>
 
-</div>
+</div> <!-- CLOSES THE MAIN DOCUMENT CONTAINER -->
